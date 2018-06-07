@@ -77,12 +77,8 @@ WSGI_APPLICATION = 'django_and_rethinkdb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_and_rethinkdb',
-        'USER': 'django_and_rdb',
-        'PASSWORD': 'django_and_rethinkdb',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/mnt/zram0/djangoRethinkDB',
     }
 }
 
@@ -90,9 +86,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-bo'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/La_Paz'
 
 USE_I18N = True
 

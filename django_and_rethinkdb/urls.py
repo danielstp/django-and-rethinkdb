@@ -14,15 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import include, url
-from django_and_rethinkdb.views import *
+from django_and_rethinkdb.views import signup, login, main, config
 from django.contrib import admin
 
 urlpatterns = [
     url(r'^auth/', include([
-        url(r'^signup/', 'django_and_rethinkdb.views.signup', name='signup'),
-        url(r'^login/', 'django_and_rethinkdb.views.login', name='login'),
+        url(r'^signup/', signup ),
+        url(r'^login/', login)
     ])),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'django_and_rethinkdb.views.main', name='main'),
-    url(r'^config.js$', 'django_and_rethinkdb.views.config', name='config')
+    url(r'^admin/', admin.site.urls),
+    url(r'^$', main),
+    url(r'^config.js$', config)
 ]
