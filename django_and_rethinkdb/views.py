@@ -39,7 +39,7 @@ def config(request):
         'ports': {
             'http': '8000',
         },
-        'url': '127.0.0.1',
+        'url': 'localhost',
         'email': request.user.username
     }
     return HttpResponse('window.config = %s;' % json.dumps(config))
