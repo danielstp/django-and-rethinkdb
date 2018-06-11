@@ -2,4 +2,4 @@ Django==2.0.6
 rethinkdb==2.3.0.post6
 backports.ssl-match-hostname==3.5.0.1
 certifi==2018.4.16
-tornado==5.0.2
+tornado==4.5.3
